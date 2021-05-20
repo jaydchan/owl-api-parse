@@ -1,4 +1,4 @@
-all: clean package out test
+all: clean package out go test
 
 clean:
 	mvn clean
@@ -16,6 +16,13 @@ RSC=./resources
 test: out
 	$(CMD) $(RSC)/and.owl > out/test_owl.owx
 	$(CMD) $(RSC)/and.owx > out/test_owx.owx
+
+clean-go:
+	rm $(RSC)/go.ow*
+
+go:
+	wget -nc http://purl.obolibrary.org/obo/go.owl# -P $(RSC)/
+	robot convert --input $(RSC)/go.owl --output $(RSC)/go.owx
 
 go.owl:
 	$(CMD) $(RSC)/go.owl > out/go_owl.owx
