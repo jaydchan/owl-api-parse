@@ -4,6 +4,7 @@
 
 * maven
 * java (13) -> update pom file for desired version
+* [robot](http://robot.obolibrary.org/)
 
 ## Usage
 
@@ -13,5 +14,4 @@ To create owl-api-parse jar file (with dependencies) type `make`.
 
 * go.owl
 * go.owx
-
 
