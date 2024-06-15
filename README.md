@@ -3,7 +3,7 @@
 ## Requirements
 
 * maven
-* java (13) -> update pom file for desired version
+* java (21) -> update pom file for desired version
 * [robot](http://robot.obolibrary.org/)
 
 ## Usage
