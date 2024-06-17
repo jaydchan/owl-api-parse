@@ -22,10 +22,13 @@ public class Main {
             OWLOntologyManager man = OWLManager.createOWLOntologyManager();
 	    OWLOntology o = man.loadOntologyFromOntologyDocument(file);
 
-            // print ontology
-            man.saveOntology(o, new OWLXMLDocumentFormat(), System.out);
+            // print success message
+            System.out.println("Parse Complete: " + args[0]);
 
-        } catch (OWLOntologyCreationException | OWLOntologyStorageException e) {
+            // print ontology -> for round not parse
+            // man.saveOntology(o, new OWLXMLDocumentFormat(), System.out);
+
+        } catch (OWLOntologyCreationException e) {
             e.printStackTrace();
         }
     }
